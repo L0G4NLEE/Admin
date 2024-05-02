@@ -40,7 +40,7 @@
               </a>
           </li>
           <li style="float: bottom;" class="bottom-content">
-              <a href="../login.html">  
+              <a href="login.html">  
                 <i class='bx bx-log-out icon'></i>
                  <span class="text nav-text">Đăng xuất </span>
               </a>
@@ -57,12 +57,13 @@
           </i>
         </div>
       <div class="product-contents ">
+   
         <div class="recent-gird">
           <div class="projects">
             <div class="card">
               <div class="card-header">
-                <div>
                   <h2>Quản lý Sản Phẩm  </h2>
+                <div>
                 </div>
                 <button
                   style="margin: 12px 0; height: 3rem; width: 5rem"
@@ -72,44 +73,7 @@
                 </button>
               </div>
               <!-- Modal -->
-              <div class="modal">
-                <div class="modal-content">
-                  <form action="">
-                  <span class="close-button">&times;</span>
-                  <h2>Thêm Sản Phẩm</h2>
-                  <p>Hình ảnh</p>
-                   <input type="file" accept=".img,.jpg" required>
-                  <p>Mã Sản Phẩm</p>
-                  <input type="text" />
-                  <p>Tên Sản Phẩm</p>
-                  <input type="text" />
-                  <p>Danh mục</p>
-                  <select name="" id="">
-                    <option value="" style="text-align: start">--Chọn--</option>
-                    <option value="" style="text-align: start">Trái Cây</option>
-                    <option value="" style="text-align: start">Nấm</option>
-                    <option value="" style="text-align: start">Rau,Củ</option>
-                    <option value="" style="text-align: start;">Rau</option>
-                  </select>
-                  <p>Giá</p>
-                  <input type="text" />
-                  <p>Số lượng</p>
-                  <input type="text" />
-                  <div
-                    style="
-                      display: flex;
-                      gap: 0.5rem;
-                      justify-content: end;
-                      margin-top: 0.5rem;
-                    "
-                  >
-                    <button>Thêm</button>
-                    <button>Hủy</button>
-                  </div>                    
-                  </form>
 
-                </div>
-              </div>
 
               <div class="card-body">
                 <table>
@@ -144,7 +108,6 @@
                         <i class='bx bx-trash' ></i>
                       </td>
                     </tr>
-                    <!-- -------------------------------------- -->
 
                     <tr>
                       <td>MC10</td>
@@ -167,7 +130,6 @@
                         <i class='bx bx-trash' ></i>
                       </td>
                     </tr>
-                    <!-- -------------------------------------- -->
                     <tr>
                       <td>MD11</td>
                       <td>Nấm Linh Chi</td>
@@ -189,7 +151,6 @@
                         <i class='bx bx-trash' ></i>
                       </td>
                     </tr>
-                    <!-- -------------------------------------- -->
                     <tr>
                       <td>AA11</td>
                       <td>Chuối</td>
@@ -210,9 +171,47 @@
                         <i class='bx bx-trash' ></i>
                       </td>
                     </tr>
-                    <!-- -------------------------------------- -->
                   </tbody>
                 </table>
+                <div class="modal">
+                <div class="modal-content">
+                  <form action="">
+                  <span class="close-button">&times;</span>
+                  <h2>Thêm Sản Phẩm</h2>
+                  <p>Danh mục</p>
+                  <select name="" id="">
+                    <option value="" style="text-align: start">--Chọn--</option>
+                    <option value="" style="text-align: start">Trái Cây</option>
+                    <option value="" style="text-align: start">Nấm</option>
+                    <option value="" style="text-align: start">Rau,Củ</option>
+                    <option value="" style="text-align: start;">Rau</option>
+                  </select>
+
+                  <p>Hình ảnh</p>
+                   <input type="file" accept=".img,.jpg" required>
+                  <p>Mã Sản Phẩm</p>
+                  <input type="text" />
+                  <p>Tên Sản Phẩm</p>
+                  <input type="text" />
+                  <p>Giá</p>
+                  <input type="number" />
+                  <p>Số lượng</p>
+                  <input type="number" />
+                  <div
+                    style="
+                      display: flex;
+                      gap: 0.5rem;
+                      justify-content: end;
+                      margin-top: 0.5rem;
+                    "
+                  >
+                    <button>Thêm</button>
+                    <button>Hủy</button>
+                  </div>                    
+                  </form>
+
+                </div>
+              </div>
                 <div class="add">
                   <button><i class="fa-solid fa-chevron-left"></i></button>
                   <button>1</button>
@@ -220,7 +219,7 @@
                   <button>...</button>
                   <button><i class="fa-solid fa-chevron-right"></i></button>
                 </div>
-              </div>
+              </div> 
             </div>
           </div>
         </div>
@@ -228,34 +227,4 @@
     </section>
   </body>
   <script src="js/script.js"></script>
-  <script>
-    var xValues = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
-
-    new Chart("myChart", {
-      type: "line",
-      data: {
-        labels: xValues,
-        datasets: [
-          {
-            data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
-            borderColor: "red",
-            fill: false,
-          },
-          {
-            data: [1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000],
-            borderColor: "green",
-            fill: false,
-          },
-          {
-            data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 200, 100],
-            borderColor: "blue",
-            fill: false,
-          },
-        ],
-      },
-      options: {
-        legend: { display: false },
-      },
-    });
-  </script>
 </html>

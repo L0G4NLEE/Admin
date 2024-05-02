@@ -228,9 +228,7 @@
     white-space: nowrap;
     color: var(--text-color);
   }
-  
-  /* Table */
-  .projects {
+   .projects {
     width: 100%;
   }
   table {
@@ -421,7 +419,9 @@
   .add button:hover {
     background-color: #94ad94;
   }
-  
+
+  /* Table */
+   
 /* Modal */
 .modal {
   position: fixed;
@@ -438,13 +438,13 @@
 
 .modal-content {
   position: absolute;
-  top: 90%;
+  top: 80%;
   left: 80%;
-  transform: translate(-80%, -90%);
+  transform: translate(-80%, -80%);
   background-color: white;
   padding: 1rem 1.5rem;
-  width: 50rem;
-  border-radius: 0.5rem;
+  width: 45rem;
+  border-radius: 1rem;
   font-size: 17px;
 }
 .modal-content input,
