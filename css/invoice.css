@@ -55,9 +55,9 @@ body{
   border-radius: 6px;
 }
 .sidebar li{
-  height: 50px;
-  margin-left: 15px;
+  margin-left: 10px;
   margin-top: 25px;
+  height: 50px;
   list-style: none;
 }
 .sidebar li .icon,
@@ -76,7 +76,7 @@ body{
   min-width: 40px;
   align-items: center;
   justify-content: center;
-  margin-left: 10px;
+  margin-left: 6px;
 }
 .sidebar .invoice-link{
   background: var(--primary-color);
@@ -116,11 +116,15 @@ body{
   width: calc(75%);
   padding: 10px 14px;
   background: var(--body-color);
+  transition: var(--tran-04);
 }
 .sidebar.close ~ .invoice-content{
   left : 73px;
-  width: calc(100%-73px);
-
+  width: calc(100% - 150px);
+  position: relative;
+  transition: var(--tran-04);
+  margin-left: 50px;
+  margin-right: 50px;
 }
 .invoice-content .top{
    display: flex;
@@ -139,12 +143,12 @@ body{
 .invoice-content .dash-content {
   padding-top: 10px;
 }
-.dash-content .title{
+.invoice-content .title{
   display: flex;
   align-items: center;
   margin: 70px 0 30px 0;
 }
-.dash-content .title i{
+.invoice-content .title i{
   position: relative;
   height: 35px;
   width: 35px;
@@ -156,18 +160,18 @@ body{
   justify-content: center;
   font-size: 24px;
 }
-.dash-content .title.text{
+.invoice-content .title.text{
   font-size: 24px;
   font-weight: 500;
   color: var(--text-color);
   margin-left: 10px;
 }
-.dash-content .boxes{
+.invoice-content .boxes{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.dash-content .boxes .box{
+.invoice-content .boxes .box{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -191,7 +195,7 @@ color: var(--text-color);
   font-weight: 500;
   color: var(--text-color);
 }
-.dash-content .activity .activity-data{
+.invoice-content .activity .activity-data{
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -389,10 +393,23 @@ select {
   }
   table {
     width: 100%;
+    border-collapse: collapse;
+  }
+  thead tr {
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    background-color:var(--sidebar-color);
+  }
+  thead td {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+  }
+  tr {
+    border-bottom: 1px solid #f0f0f0;
   }
   td {
-    padding: 1rem 0.3rem;
-    font-size: 0.7rem;
+    padding: 2rem 1rem;
+    font-size: 1rem;
     color: #222;
   }
   thead tr {

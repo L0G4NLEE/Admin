@@ -55,7 +55,7 @@ body{
   border-radius: 6px;
 }
 .sidebar li{
-  margin-left: 15px;
+  margin-left: 10px;
   margin-top: 25px;
   height: 50px;
   list-style: none;
@@ -76,7 +76,7 @@ body{
   min-width: 40px;
   align-items: center;
   justify-content: center;
-  margin-left: 10px;
+  margin-left: 6px;
 }
 .sidebar .dashboard-link{
   background: var(--primary-color);
@@ -110,19 +110,26 @@ body{
   background: var(--primary-color);
 }
 .dashboard{
+  align-items: center;
+  display: flexbox;
   position: relative;
   left: 250px;
   height: 100vh;
   width: calc(75%);
   padding: 10px 14px;
   background: var(--body-color);
+  transition: var(--tran-04);
 }
 .sidebar.close ~ .dashboard{
   left : 73px;
-  width: calc(100%-73px);
-
+  width: calc(100% - 150px);
+  position: relative;
+  transition: var(--tran-04);
+  margin-left: 50px;
+  margin-right: 50px;
 }
 .dashboard .top{
+   align-items: center;
    display: flex;
     justify-content: space-between;
     top: 0;
@@ -138,6 +145,7 @@ body{
 }
 .dashboard .dash-content {
   padding-top: 10px;
+
 }
 .dash-content .title{
   display: flex;
@@ -161,6 +169,9 @@ body{
   font-weight: 500;
   color: var(--text-color);
   margin-left: 10px;
+  align-items: center;
+  justify-content: center;
+
 }
 .dash-content .boxes{
   display: flex;

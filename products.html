@@ -1,222 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin</title>
-  <link rel="stylesheet" href="css/products.css">
-  <!-- link boxicons -->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-  <!-- sidebar -->
-  <div class="sidebar">
-    <head>
-      <div class="image-text">
-        <span class="image">
-           <img src="image/icon.ico" alt="logo">
-        </span>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/products.css">
+    <!-- link boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <input type="checkbox" id="nav-toggle" />
+    <!-- left -->
+    <div class="sidebar">
+      <head>
+        <div class="image-text">
+          <span class="image">
+             <img src="image/logo.jpg" alt="logo">
+          </span>
+        </div>
+      </head>
+      <div class="menu">
+        <ul class="menu-links">
+          <li class="dashboard-link">
+              <a href="dashboard.html">
+                 <i class='bx bxs-dashboard icon'></i>
+                 <span class="text nav-text">Dashboard</span>
+              </a>
+          </li>
+          <li class="product-link">
+              <a href="products.html">
+                  <i class='bx bx-store icon'></i>
+                 <span class="text nav-text">Sản Phẩm</span>
+              </a>
+          </li>
+          <li class="nav-link">
+              <a href="invoice.html">
+                <i class='bx bx-cart icon' ></i>
+                 <span class="text nav-text">Đơn Hàng</span>
+              </a>
+          </li>
+          <li style="float: bottom;" class="bottom-content">
+              <a href="../login.html">  
+                <i class='bx bx-log-out icon'></i>
+                 <span class="text nav-text">Đăng xuất </span>
+              </a>
+          </li>
+        </ul>
       </div>
-    </head>
-    <div class="menu">
-      <ul class="menu-links">
-        <li class="search-box">
-            <a href="#">
-              <i class='bx bx-search icon'></i>
-                <input type="search" placeholder="Tìm kiếm..."> 
-            </a>
-        </li>
-        <li class="dashboard-link">
-            <a href="dashboard.html">
-               <i class='bx bxs-dashboard icon'></i>
-               <span class="text nav-text">Dashboard</span>
-            </a>
-        </li>
-        <li class="products-link">
-            <a href="products.html">
-                <i class='bx bx-store icon'></i>
-               <span class="text nav-text">Sản Phẩm</span>
-            </a>
-        </li>
-        <li class="nav-link">
-            <a href="invoice.html">
-              <i class='bx bx-cart icon' ></i>
-               <span class="text nav-text">Đơn Hàng</span>
-            </a>
-        </li>
-        <li class="nav-link">
-            <a href="user.html">
-              <i class='bx bx-user icon'></i>
-               <span class="text nav-text"> Ý kiếnNgười dùng</span>
-            </a>
-        </li>
-        <li style="margin-top:125px;" class="bottom-content">
-            <a href="#">
-              <i class='bx bx-log-out icon'></i>
-               <span class="text nav-text">Đăng xuất </span>
-            </a>
-        </li>
-      </ul>
     </div>
-  </div>
-  <!-- product-content -->
-  <section class="product-content">
-    <div class="top">
-      <i class='bx bx-menu sidebar-toggle'></i>
-      <i class='bx bxs-user-circle logo' >
-      </i>
-    </div>
-    <div class="recent-gird">
-      <div class="projects">
-        <div class="card">
-          <!-- Tiêu đề -->
-          <div class="card-header">
-            <div>
-              <h2>Cập nhật sản phẩm</h2>
-            </div>
-            <button
-              style="margin: 12px 0; height: 3rem; width: 5rem"
-              class="trigger"
-            >
-              + Thêm
-            </button>
-          </div>
-              <a href="#">
-              <i class='bx bx-search icon'></i>
-                <input type="search" placeholder="Tìm kiếm..."> 
-            </a>
-          </div>
-          <div class="card-body">
-            <table>
-              <thead>
-                <tr>
-                  <td>Tên sản phẩm</td>
-                  <td>Hình ảnh</td>
-                  <td>Danh mục</td>
-                  <td>Giá</td>
-                  <td>Số lượng</td>
-                  <td class="td">Tùy chỉnh</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>       
-                  <td>cam</td>
-                  <td style="width: 20%; height: 20%; text-align: center">
-                    <img
-                      src="./images/trachanhmatong.png"
-                      style="width: 20%"
-                      alt=""
-                      srcset=""
-                    />
-                  </td>
+    <section class="product">
+      <div class="top">
+        <i class='bx bx-menu sidebar-toggle'></i>
+        <i class='bx bxs-user-circle logo' >
+        <i class='bx bx-bell'></i>
+        <i class='bx bx-envelope'></i>
+          </i>
+        </div>
+      <div class="product-contents ">
+        <div class="recent-gird">
+          <div class="projects">
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h2>Quản lý Sản Phẩm  </h2>
+                </div>
+                <button
+                  style="margin: 12px 0; height: 3rem; width: 5rem"
+                  class="trigger"
+                >
+                  + Thêm
+                </button>
+              </div>
+              <!-- Modal -->
+              <div class="modal">
+                <div class="modal-content">
+                  <form action="">
+                  <span class="close-button">&times;</span>
+                  <h2>Thêm Sản Phẩm</h2>
+                  <p>Hình ảnh</p>
+                   <input type="file" accept=".img,.jpg" required>
+                  <p>Mã Sản Phẩm</p>
+                  <input type="text" />
+                  <p>Tên Sản Phẩm</p>
+                  <input type="text" />
+                  <p>Danh mục</p>
+                  <select name="" id="">
+                    <option value="" style="text-align: start">--Chọn--</option>
+                    <option value="" style="text-align: start">Trái Cây</option>
+                    <option value="" style="text-align: start">Nấm</option>
+                    <option value="" style="text-align: start">Rau,Củ</option>
+                    <option value="" style="text-align: start;">Rau</option>
+                  </select>
+                  <p>Giá</p>
+                  <input type="text" />
+                  <p>Số lượng</p>
+                  <input type="text" />
+                  <div
+                    style="
+                      display: flex;
+                      gap: 0.5rem;
+                      justify-content: end;
+                      margin-top: 0.5rem;
+                    "
+                  >
+                    <button>Thêm</button>
+                    <button>Hủy</button>
+                  </div>                    
+                  </form>
 
-                  <td>quả</td>
-                  <td>19.999</td>
-                  <td>21</td>
-                  <td class="td">
-                    <i class='bx bx-down-arrow-alt'></i>
-                    <i class="fa-solid fa-trash-can move"></i>
-                  </td>
-                </tr>
-                <!-- -------------------------------------- -->
-                <tr>       
-                  <td>cải</td>
-                  <td style="width: 20%; height: 20%; text-align: center">
-                    <img
-                      src="./images/trachanhmatong.png"
-                      style="width: 20%"
-                      alt=""
-                      srcset=""
-                    />
-                  </td>
+                </div>
+              </div>
 
-                  <td>rau</td>
-                  <td>14.999</td>
-                  <td>222</td>
-                  <td class="td">
-                    <i class='bx bx-down-arrow-alt'></i>
-                    <i class="fa-solid fa-trash-can move"></i>
-                  </td>
-                </tr>
-                <!-- -------------------------------------- -->
-                <tr>       
-                  <td>nấm link tree</td>
-                  <td style="width: 20%; height: 20%; text-align: center">
-                    <img
-                      src="./images/trachanhmatong.png"
-                      style="width: 20%"
-                      alt=""
-                      srcset=""
-                    />
-                  </td>
+              <div class="card-body">
+                <table>
+                  <thead>
+                    <tr>
+                      <td>Mã S.P</td>
+                      <td>Tên S.Phẩm</td>
+                      <td>Hình ảnh</td>
+                      <td>Danh mục</td>
+                      <td>Giá</td>
+                      <td>Số lượng</td>
+                      <td class="td">Tùy chỉnh</td>
+                    </tr>
+                  </thead>
+                  <tbody style="background-color: white">
+                    <tr>
+                      <td>A012</td>
+                      <td>Bắp cải</td>
+                      <td style="width: 20%; height: 20%; text-align: center">
+                        <img
+                          src="image/bapcai1.jpg"
+                          style="width: 100%"
+                          alt=""
+                          srcset=""
+                        />
+                      </td>
+                      <td>Rau</td>
+                      <td>35.000đ</td>
+                      <td>133</td>
+                      <td>
+                       <i class='bx bx-pencil'></i>
+                        <i class='bx bx-trash' ></i>
+                      </td>
+                    </tr>
+                    <!-- -------------------------------------- -->
 
-                  <td>núm</td>
-                  <td>21.999</td>
-                  <td>56</td>
-                  <td class="td">
-                    <i class='bx bx-down-arrow-alt'></i>
-                    <i class="fa-solid fa-trash-can move"></i>
-                  </td>
-                </tr>
-                <!-- -------------------------------------- -->
-                <tr>       
-                  <td>kakaroto</td>
-                  <td style="width: 20%; height: 20%; text-align: center">
-                    <img
-                      src="./images/trachanhmatong.png"
-                      style="width: 20%"
-                      alt=""
-                      srcset=""
-                    />
-                  </td>
+                    <tr>
+                      <td>MC10</td>
+                      <td>Cam</td>
 
-                  <td>củ</td>
-                  <td>17.777</td>
-                  <td>35</td>
-                  <td class="td">
-                    <i class='bx bx-down-arrow-alt'></i>
-                    <i class="fa-solid fa-trash-can move"></i>
-                  </td>
-                </tr>
-                <!-- -------------------------------------- -->
-                <tr>       
-                  <td>dưa hấu</td>
-                  <td style="width: 20%; height: 20%; text-align: center">
-                    <img
-                      src="./images/trachanhmatong.png"
-                      style="width: 20%"
-                      alt=""
-                      srcset=""
-                    />
-                  </td>
+                      <td style="width: 20%; height: 20%; text-align: center">
+                        <img
+                          src="image/cam1.jpg"
+                          style="width: 100%"
+                          alt=""
+                          srcset=""
+                        />
+                      </td>
 
-                  <td>quả</td>
-                  <td>19.999</td>
-                  <td>2155</td>
-                  <td class="td">
-                    <i class='bx bx-down-arrow-alt'></i>
-                    <i class="fa-solid fa-trash-can move"></i>
-                  </td>
-                </tr>
-                <!-- -------------------------------------- -->
+                      <td>Trái cây</td>
+                      <td>25.000đ</td>
+                      <td>130</td>
+                      <td class="td">
+                        <i class='bx bx-pencil'></i>
+                        <i class='bx bx-trash' ></i>
+                      </td>
+                    </tr>
+                    <!-- -------------------------------------- -->
+                    <tr>
+                      <td>MD11</td>
+                      <td>Nấm Linh Chi</td>
+                      <td style="width: 20%; height: 20%; text-align: center">
+                        <img
+                          src="image/linhchi2.jpg"
+                          style="width: 100%"
+                          alt=""
+                          srcset=""
+                        />
+                      </td>
 
-               
-                <!-- -------------------------------------- -->
-              </tbody>
-            </table>
-            <div class="add">
-              <button><i class="fa-solid fa-chevron-left"></i></button>
-              <button>1</button>
-              <button>2</button>
-              <button>...</button>
-              <button><i class="fa-solid fa-chevron-right"></i></button>
+
+                      <td>Nấm</td>
+                      <td>25.000đ</td>
+                      <td>87</td>
+                      <td class="td">
+                        <i class='bx bx-pencil'></i>
+                        <i class='bx bx-trash' ></i>
+                      </td>
+                    </tr>
+                    <!-- -------------------------------------- -->
+                    <tr>
+                      <td>AA11</td>
+                      <td>Chuối</td>
+                      <td style="width: 20%; height: 20%; text-align: center">
+                        <img
+                          src="image/chuoi3.jpg"
+                          style="width: 100%"
+                          alt=""
+                          srcset=""
+                        />
+                      </td>
+
+                      <td>trái cây</td>
+                      <td>20.000đ</td>
+                      <td>77</td>
+                      <td class="td">
+                        <i class='bx bx-pencil'></i>
+                        <i class='bx bx-trash' ></i>
+                      </td>
+                    </tr>
+                    <!-- -------------------------------------- -->
+                  </tbody>
+                </table>
+                <div class="add">
+                  <button><i class="fa-solid fa-chevron-left"></i></button>
+                  <button>1</button>
+                  <button>2</button>
+                  <button>...</button>
+                  <button><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>`
-    </div>
-  </section>
-   
+      </div>
+    </section>
+  </body>
   <script src="js/script.js"></script>
-</body>
+  <script>
+    var xValues = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+
+    new Chart("myChart", {
+      type: "line",
+      data: {
+        labels: xValues,
+        datasets: [
+          {
+            data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
+            borderColor: "red",
+            fill: false,
+          },
+          {
+            data: [1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000],
+            borderColor: "green",
+            fill: false,
+          },
+          {
+            data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 200, 100],
+            borderColor: "blue",
+            fill: false,
+          },
+        ],
+      },
+      options: {
+        legend: { display: false },
+      },
+    });
+  </script>
 </html>

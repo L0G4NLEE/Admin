@@ -55,9 +55,9 @@
     border-radius: 6px;
   }
   .sidebar li{
-    height: 50px;
-    margin-left: 15px;
+    margin-left: 10px;
     margin-top: 25px;
+    height: 50px;
     list-style: none;
   }
   .sidebar li .icon,
@@ -76,9 +76,9 @@
     min-width: 40px;
     align-items: center;
     justify-content: center;
-    margin-left: 10px;
+    margin-left: 6px;
   }
-  .sidebar .products-link{
+  .sidebar .product-link{
     background: var(--primary-color);
     border-radius: 5px;
   }
@@ -109,20 +109,26 @@
   .sidebar li a:hover{
     background: var(--primary-color);
   }
-  .product-content{
+  .product{
     position: relative;
     left: 250px;
     height: 100vh;
     width: calc(75%);
     padding: 10px 14px;
     background: var(--body-color);
+    transition: var(--tran-04);
   }
-  .sidebar.close ~ .product-content{
+  .sidebar.close ~ .product{
     left : 73px;
-    width: calc(100%-73px);
+    width: calc(100% - 150px);
+    position: relative;
+    transition: var(--tran-04);
+    margin-left: 50px;
+    margin-right: 50px;
   
   }
-  .product-content .top{
+  .product .top{
+    align-items: center;
      display: flex;
       justify-content: space-between;
       top: 0;
@@ -131,20 +137,20 @@
       border-bottom: solid var(--text-color);
       box-shadow: 2px 3px lightgrey;
   }
-  .product-content .top .sidebar-toggle{
+  .product .top .sidebar-toggle,.logo{
     font-size: 26px;
     color: var(--text-color);
     cursor: pointer;
   }
-  .product-content .dash-content {
+  .product .product-contents {
     padding-top: 10px;
   }
-  .product-content .title{
+  .product .title{
     display: flex;
     align-items: center;
     margin: 70px 0 30px 0;
   }
-  .product-content .title i{
+  .product .title i{
     position: relative;
     height: 35px;
     width: 35px;
@@ -156,18 +162,18 @@
     justify-content: center;
     font-size: 24px;
   }
-  .product-content .title.text{
+  .product .title.text{
     font-size: 24px;
     font-weight: 500;
     color: var(--text-color);
     margin-left: 10px;
   }
-  .product-content.boxes{
+  .product.boxes{
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  .product-content .boxes .box{
+  .product .boxes .box{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -191,7 +197,7 @@
     font-weight: 500;
     color: var(--text-color);
   }
-  .dash-content .activity .activity-data{
+  .product-contents .activity .activity-data{
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -225,7 +231,7 @@
   
   /* Table */
   .projects {
-    width: 75%;
+    width: 100%;
   }
   table {
     position: relative;
@@ -251,16 +257,13 @@
     align-items: center;
   }
   td {
+    border-bottom: solid 1px black;
     align-items: center;
     padding: 2rem 1rem;
     font-size: 1rem;
     color: #222;
     align-items: center;
     justify-content: center;
-  }
-  .td {
-    display: flex;
-    text-align: center;
   }
   td .pen {
     color: #4d8a54;
@@ -279,7 +282,10 @@
     text-align: center;
     background-color: #d3e4cd;
   }
-  
+  td i{
+    font-size: 25px;
+    cursor: pointer;
+  }
   .customer {
     display: flex;
     justify-content: space-between;
@@ -377,100 +383,6 @@
     border: 1px solid var(--main-color);
     cursor: pointer;
   }
-  
-  @media only screen and (max-width: 1200px) {
-    .sidebar {
-      width: 70px;
-    }
-  
-    .sidebar .sidebar-brand,
-    .sidebar li {
-      padding-left: 0.2rem;
-      text-align: center;
-    }
-  
-    .sidebar li a {
-      padding-left: 0rem;
-    }
-  
-    .sidebar .sidebar-brand h2 i:last-child,
-    .sidebar li a span:last-child {
-      display: none;
-    }
-    .sidebar .sidebar-brand img {
-      margin-left: -17px !important;
-      width: 100px !important;
-      height: 100px !important;
-    }
-    .main-content {
-      margin-left: 70px;
-    }
-    .main-content header {
-      width: calc(100% - 70px);
-      left: 70px;
-    }
-  }
-  
-  @media only screen and (max-width: 960px) {
-    .cards {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .recent-gird {
-      grid-template-columns: 60% 40%;
-    }
-    .modal-content {
-      position: absolute;
-      top: 70% !important;
-      left: 80%;
-      transform: translate(-80%, -90%);
-      background-color: white;
-      padding: 1rem 1.5rem;
-      width: 40rem !important;
-      border-radius: 0.5rem;
-      font-size: 17px;
-    }
-  }
-  
-  @media only screen and (max-width: 768px) {
-    body,
-    html {
-      font-size: 1rem !important;
-    }
-    .cards {
-      grid-template-columns: repeat(1, 1fr);
-    }
-    .recent-gird {
-      grid-template-columns: 100%;
-    }
-    .search-wrapper {
-      display: none;
-    }
-    .chart h2 {
-      font-size: 1rem;
-      margin-left: 0 !important;
-    }
-    table {
-      width: 100%;
-    }
-    td {
-      padding: 1rem 0.3rem;
-      font-size: 0.5rem;
-      color: #222;
-    }
-    thead tr {
-      border-top: 1px solid #f0f0f0;
-      border-bottom: 2px solid #f0f0f0;
-      background-color: #84b288;
-    }
-    thead td {
-      padding: 0.3rem 0.5rem;
-    }
-  
-    select {
-      height: 1rem;
-      font-size: 0.5rem;
-    }
-  }
 
   .box {
     padding: 1rem;
@@ -510,84 +422,83 @@
     background-color: #94ad94;
   }
   
-  /* Modal */
-  .modal {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(1.1);
-    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-  }
-  
-  .modal-content {
-    position: absolute;
-    top: 90%;
-    left: 80%;
-    transform: translate(-80%, -90%);
-    background-color: white;
-    padding: 1rem 1.5rem;
-    width: 50rem;
-    border-radius: 0.5rem;
-    font-size: 17px;
-  }
-  .modal-content input,
-  select {
-    width: 100%;
-    height: 2.3rem;
-  }
-  .modal-content p {
-    margin-top: 1rem;
-  }
-  .modal-content button {
-    width: 18%;
-    height: 2rem;
-    border-radius: 20px;
-    border: none;
-    font-size: 16px;
-    font-family: "Quicksand", sans-serif;
-  }
-  .modal-content button:first-child {
-    background-color: #4d8a54;
-    color: white;
-  }
-  .modal-content button:first-child:hover {
-    background-color: white;
-    border: 2px solid #4d8a54;
-    color: #4d8a54;
-  }
-  .modal-content button:nth-child(2):hover {
-    background-color: white;
-    border: 2px solid #ce4d4d;
-    color: #ce4d4d;
-  }
-  .modal-content button:nth-child(2) {
-    background-color: #ce4d4d;
-    color: white;
-  }
-  
-  .close-button {
-    float: right;
-    width: 1.5rem;
-    line-height: 1.5rem;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 0.25rem;
-    background-color: lightgray;
-  }
-  
-  .close-button:hover {
-    background-color: darkgray;
-  }
-  
-  .show-modal {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
-    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-  }
-  
+/* Modal */
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+  position: absolute;
+  top: 90%;
+  left: 80%;
+  transform: translate(-80%, -90%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 50rem;
+  border-radius: 0.5rem;
+  font-size: 17px;
+}
+.modal-content input,
+select {
+  width: 100%;
+  height: 2.3rem;
+}
+.modal-content p {
+  margin-top: 1rem;
+}
+.modal-content button {
+  width: 18%;
+  height: 2rem;
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  font-family: "Quicksand", sans-serif;
+}
+.modal-content button:first-child {
+  background-color: #4d8a54;
+  color: white;
+}
+.modal-content button:first-child:hover {
+  background-color: white;
+  border: 2px solid #4d8a54;
+  color: #4d8a54;
+}
+.modal-content button:nth-child(2):hover {
+  background-color: white;
+  border: 2px solid #ce4d4d;
+  color: #ce4d4d;
+}
+.modal-content button:nth-child(2) {
+  background-color: #ce4d4d;
+  color: white;
+}
+
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+
+.close-button:hover {
+  background-color: darkgray;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
