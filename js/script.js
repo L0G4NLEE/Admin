@@ -19,6 +19,27 @@ function windowOnClick(event) {
         toggleModal();
     }
 }
-trigger.addEventListener("click", toggleModal);
-closeButton.addEventListener("click", toggleModal);
-window.addEventListener("click", windowOnClick);
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.delete-button').forEach(button => {
+        button.addEventListener('click', function() {
+            this.closest('.product-item').remove();
+        });
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.edit-button').forEach(button => {
+        button.addEventListener('click', function() {
+            var quantityElement = this.closest('.product-item').querySelector('.quantity');
+            var currentQuantity = parseInt(quantityElement.textContent);
+            var newQuantity = prompt('Nhập số lượng mới:', currentQuantity);
+            if (newQuantity !== null) {
+                if (!isNaN(newQuantity)) {
+                    quantityElement.textContent = parseInt(newQuantity);
+                } else {
+                    alert('Vui lòng nhập một số hợp lệ.');
+                }
+            }
+        });
+    });
+});
+
