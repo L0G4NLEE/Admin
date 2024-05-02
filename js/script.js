@@ -19,6 +19,9 @@ function windowOnClick(event) {
         toggleModal();
     }
 }
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.delete-button').forEach(button => {
         button.addEventListener('click', function() {
